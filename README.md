@@ -1,17 +1,42 @@
-# 📈 IMC Prosperity 4 — Team NEMO
-### 🏆 Manual Rank 1 (Round 1) | Final Standings: #1075 Manual, #1501 Overall
+# 📈 Algorithmic Competition & Learning Journey
+### 🏆 Team NEMO | IMC Prosperity 4 & Competitive Poker Bots
 
-Welcome to the official repository for **Team NEMO's** participation in the **IMC Prosperity 4** challenge. This project showcases the intersection of quantitative finance, game theory, and high-frequency algorithmic trading strategies.
-
-![Final Leaderboard](plots/final_leaderboard.png)
+This repository serves as a professional journal for my journey into quantitative trading and competitive algorithmic challenges. Both projects featured here were high-stakes global competitions that served as massive learning catalysts for my growth in data science, finance, and game theory.
 
 ---
 
-## 🚀 Highlights
-- **Manual Performance:** **Rank 1 Globally in Round 1** (+87,995 XIRECs).
-- **Final Standing:** Ranked #1075 in Manual, #1501 Overall out of 20,000+ participants.
-- **Algorithmic Edge:** Engineered a multi-layer strategy combining Black-Scholes volatility arbitrage with counterparty "Mark" behavioral analysis.
-- **Top Strategy:** Identified a risk-free arbitrage in Round 4 using the **Stulz Formula** for chooser options.
+## 🌊 IMC Prosperity 4: Quantitative Trading
+**Status:** High-Effort Learning Project | **Peak Performance:** Rank 1 Globally (Manual Round 1)
+
+My participation in IMC Prosperity 4 was a journey of "learning by doing." While our final standing was #1501 overall, the project was a success in strategic evolution—starting from simple mid-price models and progressing to complex Black-Scholes volatility arbitrage.
+
+![Final Leaderboard](plots/final_leaderboard.png)
+
+### 🚀 Key Learning Milestones
+- **Round 1 (Rank 1 Globally):** Mastered auction game theory and stale-book dynamics.
+- **The Options Pivot:** After a loss in Round 3, I reverse-engineered the bot's hidden parameters to identify a structural 1.7x gap between Implied and Realized volatility.
+- **Mark Analysis:** Learned to build real-time ledgers to categorize counterparty behaviors into "Smart Money" vs. "Noise."
+
+---
+
+## ♠️ Poker Bot Competition: Strategic Game Theory
+**Status:** Parallel Learning Track
+
+In addition to quantitative finance, I applied similar algorithmic principles to a competitive Poker Bot challenge. This project focused on:
+- **Nash Equilibrium:** Implementing GTO (Game Theory Optimal) strategies.
+- **Exploitative Play:** Building models to detect and punish opponent leaks (similar to the "Mark" analysis in Prosperity).
+- **Risk Management:** Managing bankroll variance through Kelly Criterion-inspired sizing.
+
+---
+
+## 🧠 The Philosophy: Continuous Improvement
+Neither of these projects is "finished." I view them as living foundations. My goal isn't just to rank, but to understand the mathematical "why" behind every move.
+- **Iteration:** I am constantly refining the `trader.py` and my poker logic as I learn more about stochastic processes and machine learning.
+- **Transparency:** I showcase the wins (Rank 1 Round 1) and the losses (Round 3 Options) equally because the learning comes from the gap between them.
+
+---
+*Developed by Team NEMO | Focused on Quantitative Excellence and Strategic Growth.*
+
 
 ---
 
