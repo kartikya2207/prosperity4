@@ -14,7 +14,7 @@ class Trader:
         best_ask, ask_vol = min(order_depth.sell_orders.items())
         ask_vol = abs(ask_vol) 
         if bid_vol + ask_vol == 0: return (best_bid + best_ask) / 2.0
-        return (best_bid * ask_vol + best_ask * bid_vol) / (bid_vol + ask_vol)
+        return (best_bid * bid_vol + best_ask * ask_vol) / (bid_vol + ask_vol)
 
     def run(self, state: TradingState) -> tuple[Dict[Symbol, List[Order]], int, str]:
         result = {}

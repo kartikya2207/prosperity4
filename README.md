@@ -63,8 +63,8 @@ Our manual rounds were where our game theory strategies shined, accumulating ~38
 ├── STRATEGY_PLAYBOOK.md     # Engineering & iteration guidelines
 ├── src/
 │   ├── round_1_2/           # Stationary MR & Linear Drift strategies
-│   └── round_3_5/           # Volatility Arbitrage & Options models
-├── analysis/                # EDA and strategy validation notebooks
+│   ├── round_3_5/           # Volatility Arbitrage & Options models
+│   └── analysis/            # EDA and strategy validation notebooks
 └── plots/                   # Visualizations of market data and results
 ```
 

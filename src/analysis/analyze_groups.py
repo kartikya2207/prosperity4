@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 
+# Requires price CSV files from the IMC Prosperity 4 data download.
+# Place them under data/round5/ relative to repo root before running.
 df2 = pd.read_csv("data/round5/prices_round_5_day_2.csv", sep=";")
 df3 = pd.read_csv("data/round5/prices_round_5_day_3.csv", sep=";")
 df4 = pd.read_csv("data/round5/prices_round_5_day_4.csv", sep=";")

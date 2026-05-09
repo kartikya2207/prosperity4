@@ -1,6 +1,7 @@
 import json
 import math
 import statistics
+from collections import deque
 from typing import Any, List, Dict, Tuple, Optional
 from datamodel import (Order, OrderDepth, ProsperityEncoder, Symbol, Trade, TradingState)
 
@@ -78,7 +79,7 @@ class Trader:
     def __init__(self):
         self.ema_mids = {}
         self.ema_alpha = 0.1
-        self.ipr_history = []
+        self.ipr_history: deque = deque(maxlen=50)
         
     def get_mid(self, od: OrderDepth) -> Optional[float]:
         if not od.buy_orders or not od.sell_orders: return None
@@ -123,18 +124,22 @@ class Trader:
                 elif best_bid > fair + 1:
                     orders.append(Order(product, best_bid, -limit - pos))
                 # Passive MM
-                orders.append(Order(product, int(fair-2), max(0, limit - pos - 20)))
-                orders.append(Order(product, int(fair+2), -max(0, limit + pos - 20)))
+                buy_qty = max(0, limit - pos - 20)
+                sell_qty = max(0, limit + pos - 20)
+                if buy_qty > 0:
+                    orders.append(Order(product, int(fair-2), buy_qty))
+                if sell_qty > 0:
+                    orders.append(Order(product, int(fair+2), -sell_qty))
 
             # --- INTARIAN_PEPPER_ROOT (Trend Following) ---
             elif product == "INTARIAN_PEPPER_ROOT":
                 mid = self.get_mid(od)
                 self.ipr_history.append(mid)
-                slope = self.compute_ols_slope(self.ipr_history)
+                slope = self.compute_ols_slope(list(self.ipr_history))
                 if slope > 0.05:
                     orders.append(Order(product, best_ask, limit - pos))
-                else:
-                    orders.append(Order(product, best_bid + 1, limit - pos))
+                elif slope < -0.05:
+                    orders.append(Order(product, best_bid, -(limit + pos)))
 
             # --- HYDROGEL_PACK & VELVETFRUIT_EXTRACT (Passive MM) ---
             elif product in ["HYDROGEL_PACK", "VELVETFRUIT_EXTRACT", "VEV_4000"]:
@@ -151,11 +156,14 @@ class Trader:
             if orders:
                 result[product] = orders
 
-        # End of day flatten
+        # End of day flatten — hit current best bid/ask to guarantee fill
         if state.timestamp > 995000:
             for product, pos in state.position.items():
-                if pos > 0: result.setdefault(product, []).append(Order(product, 0, -pos))
-                elif pos < 0: result.setdefault(product, []).append(Order(product, 1000000, -pos))
+                od = state.order_depths.get(product)
+                if pos > 0 and od and od.buy_orders:
+                    result.setdefault(product, []).append(Order(product, max(od.buy_orders.keys()), -pos))
+                elif pos < 0 and od and od.sell_orders:
+                    result.setdefault(product, []).append(Order(product, min(od.sell_orders.keys()), -pos))
 
         logger.flush(state, result, conversions, "")
         return result, conversions, ""
