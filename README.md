@@ -10,10 +10,11 @@ This repository serves as a professional journal for my journey into quantitativ
 
 My participation in IMC Prosperity 4 was a journey of "learning by doing." While our final standing was #1501 overall, the project was a success in strategic evolution—starting from simple mid-price models and progressing to complex Black-Scholes volatility arbitrage.
 
-![Manual Round 1 Rank 1](plots/manual_round_1_result.png)
-*Visual proof of our Rank 1 performance in the Manual Round 1 Stale-Book Auction.*
+![Manual Master Round 1 Badge](plots/manual_round_1_result.png)
+*Team NEMO achieved Rank 1 Globally in the Manual Round 1 Stale-Book Auction.*
 
-![Final Leaderboard](plots/final_leaderboard.png)
+![Final Competition Standings](plots/final_leaderboard.png)
+*Final Competition Standings: #1075 Manual Rank | #1501 Overall Rank.*
 
 ### 🚀 Key Learning Milestones
 - **Round 1 (Rank 1 Globally):** Mastered auction game theory and stale-book dynamics.
