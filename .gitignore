@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+backtest_runs/
+temp_zips/
+.env
+.ipynb_checkpoints/
+*.zip
+*.json
+*.log
