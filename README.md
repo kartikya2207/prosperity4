@@ -1,12 +1,15 @@
 # 📈 IMC Prosperity 4 — Team NEMO
-### 🏆 Global Top 2% in Manual Rounds (#131) | Top-Tier Quantitative Trading
+### 🏆 Manual Rank 1 (Round 1) | Final Standings: #1075 Manual, #1501 Overall
 
 Welcome to the official repository for **Team NEMO's** participation in the **IMC Prosperity 4** challenge. This project showcases the intersection of quantitative finance, game theory, and high-frequency algorithmic trading strategies.
+
+![Final Leaderboard](plots/final_leaderboard.png)
 
 ---
 
 ## 🚀 Highlights
-- **Manual Performance:** +382,000 XIRECs (Ranked #131 Globally).
+- **Manual Performance:** **Rank 1 Globally in Round 1** (+87,995 XIRECs).
+- **Final Standing:** Ranked #1075 in Manual, #1501 Overall out of 20,000+ participants.
 - **Algorithmic Edge:** Engineered a multi-layer strategy combining Black-Scholes volatility arbitrage with counterparty "Mark" behavioral analysis.
 - **Top Strategy:** Identified a risk-free arbitrage in Round 4 using the **Stulz Formula** for chooser options.
 
@@ -47,7 +50,8 @@ Developed a proprietary "Wall-Mid" fair value estimate using Level-2 order book 
 
 ## 📊 Manual Round Performance
 Our team excelled in the game theory and mathematical optimization rounds:
-- **Round 2 (Resource Allocation):** Achieved **92.4% of theoretical maximum**, placing #131 globally.
+- **Round 1 (Stale-Book Auction):** Achieved **Rank 1 Globally** with a perfect bidding strategy.
+- **Round 2 (Resource Allocation):** Achieved **92.4% of theoretical maximum** (#131 rank for this round).
 - **Round 4 (Options Arbitrage):** Successfully identified and traded a chooser-option arbitrage, locking in risk-free profit.
 
 ---

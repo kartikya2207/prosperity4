@@ -7,8 +7,9 @@ This journal documents the full strategic evolution of Team NEMO during the IMC 
 
 ## 🏆 Competition Summary
 - **Total Manual PnL:** ~382,000 XIRECs (2.5× Target)
-- **Manual Rank:** #131 globally (Top 2%)
-- **Algo Status:** Qualified for GOAT (Round 3-5), peak algorithmic performance in Round 4 (+25.8k).
+- **Manual Rank:** #1075 (Final) | **Peak: #1 Globally (Round 1)**
+- **Overall Rank:** #1501
+- **Algo Status:** Qualified for GOAT (Round 3-5), peak performance in Round 4 (+25.8k).
 
 ---
 
@@ -63,9 +64,9 @@ We computed the "edge vs mid" for all 7 named counterparties:
 ### R1: Stale-Book Auction (+87k)
 - **Strategy:** Bid just above the queue top to guarantee price priority while keeping clearing price favorable.
 
-### R2: Three-Pillar Allocation (+201k | #131 Global)
+### R2: Three-Pillar Allocation (+201k)
 - **Math:** Optimal Research:Scale ratio derived via calculus (23:77).
-- **Game Theory:** Used Bayesian synthesis of past competition data to predict crowd clustering at `sp=48`.
+- **Game Theory:** Used Bayesian synthesis of past competition data to predict crowd clustering at `sp=48` (Achieved #131 rank for this round).
 
 ### R3: Two-Bid Auction (+74k)
 - **Strategy:** Placed bids at (775, 855). Learned that crowds overshoot Nash equilibrium more aggressively than models predict.
