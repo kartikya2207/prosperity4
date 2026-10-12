@@ -59,6 +59,9 @@ forward return for each counterparty. Mark 01 (net long 4,678, +64 bps forward) 
 −72 bps) come out as near mirror images, and Mark 38 crosses the spread hardest (+8.6 vs mid). This analysis
 was descriptive and never went into the live bot.
 
+![Counterparty classification](plots/counterparty_classification.png)
+*Round-4 counterparties: quantity-weighted 5,000-tick forward return (left) vs average edge paid over mid (right), from `counterparty.py`.*
+
 **Stat-arb study (round 5, [`pair_trader.py`](src/round_3_5/pair_trader.py)).** This was a correlation-selected
 pairs trader on the basket products. It stayed a standalone study and was never submitted.
 
