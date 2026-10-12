@@ -8,3 +8,10 @@ temp_zips/
 *.zip
 *.json
 *.log
+
+# ---- Secrets / local env ----
+.env*
+!.env.example
+*.pem
+*.key
+kaggle.json
